@@ -1,0 +1,23 @@
+
+
+
+
+def guessing()
+
+puts "Make your guess (int 0-1000): "
+$guess = gets.to_i
+puts $guess
+if $target == $guess 
+  puts "Congrats! YOU WIN!!!!!!!"
+elsif $guess < $target
+  puts "You are tooooooo low, guess again"
+  guessing
+else 
+  puts "You are way way too high! guess again"
+  guessing
+end
+
+
+$target = rand(1000)
+guessing
+
